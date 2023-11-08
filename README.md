@@ -1,6 +1,6 @@
 # redten - A Platform for Distributed, Self-hosted LLM RAG and Reinforcement Learning with Human Feedback (RLHF)
 
-![redten - a distributed, self-hosted llm reinforcement learning with human feedback and rag architecture](https://raw.githubusercontent.com/redten-ai/llama-client-aic/main/images/redten-a-distributed-self-hosted-llm-reinforcement-learning-with-rag-architecture.png)
+![redten - a distributed, self-hosted llm reinforcement learning with human feedback and rag architecture](https://raw.githubusercontent.com/redten-ai/llama-client-aic/main/docs/images/redten-a-distributed-self-hosted-llm-reinforcement-learning-with-rag-architecture.png)
 
 Python REST client for self-hosted llama building, testing and tuning platform at:
 
