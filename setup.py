@@ -24,7 +24,7 @@ setup(
         "examples/get-ai-result.py",
         "examples/review-answer.py",
     ],
-    version="1.0.0",
+    version="1.0.1",
     license="Apache 2.0",
     description=(
         "python client for redten - "
