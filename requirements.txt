@@ -1,0 +1,6 @@
+argparse
+flake8
+pycodestyle
+requests
+ujson
+uuid

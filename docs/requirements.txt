@@ -1,0 +1,4 @@
+llama-client-aic
+mkdocs
+mkdocstrings-python
+markdown-include
