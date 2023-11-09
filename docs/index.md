@@ -20,7 +20,7 @@ The redten RLHF REST api focuses on:
 - enabling subject matter experts to review results and submit expert answers for RAG source analysis which improves overall LLM response quality over time (tracking dashboard examples coming soon)
 decoupling LLM/gpu workloads from reinforcement learning with human feedback and RAG workloads
 - finding knowledge blindspots - search api for tracking LLM response quality across many dimensions: models, quantization, batches, context sizes, tokens, and embeddings (chunks, structured vs unstructured datasets and use cases)
-- Embedding as a Service (EaaS) with a multi-tenant job engine built on the v2 rust [restapi crate](https://docs.rs/restapi/latest/restapi/) that supports [POST-ing uploaded files to s3](https://docs.rs/restapi/latest/restapi/#s3-upload-a-user-data-file-no-file-type-restrictions--s3-archival) and includes [optional kafka fire-and-forget publishing](https://docs.rs/restapi/latest/restapi/kafka/publish_msg/fn.publish_msg.html) using a persistent Postgres backend for tracking many concurrent ai workloads (e.g. question/answer, synthetic dataset generation) and results
+- Embedding as a Service (EaaS) with a multi-tenant job engine built on the v2 rust [restapi crate](https://docs.rs/restapi/latest/restapi/) that supports [POST-ing uploaded files to s3 using the optional 'sloc' header key](https://docs.rs/restapi/latest/restapi/#s3-upload-a-user-data-file-no-file-type-restrictions--s3-archival) and includes [optional kafka fire-and-forget publishing](https://docs.rs/restapi/latest/restapi/kafka/publish_msg/fn.publish_msg.html) using a persistent Postgres backend for tracking many concurrent ai workloads (e.g. question/answer, synthetic dataset generation) and results
 - evaluating any open source llm model with coming-soon open question/answer datasets with more RAG data sources (pdfs/csvs/txt/parquet) in many [pgvector embedding databases](https://github.com/pgvector/pgvector) using an emerging Retrieval as a Service (RaaS) architecture
 - building synthetic datasets from a RAG-customized LLM (lora/qlora coming soon!)
 
@@ -185,7 +185,7 @@ Review individual LLM responses with subject matter expert(s) and attach reviewe
 - reviewer answer/explanation/reasoning
 - reviewer confidence score
 
-Note: confidence score is a value between 0-100.0 that the reviewer uses to state how confident the reviewer's answer is versus the llm's response. Here's some guidelines for how confidence scores work with rlhf+rag works:
+Note: confidence score is a value between 0-100.0 that the reviewer uses to state how confident the reviewer's answer is versus the llm's response. Here's some guidelines for how confidence scores work with rlhf+rag:
 
 - **0.0-64** - the reviewer is not confident in the answer
 - **65-79** - the reviewer is somewhat confident in the answer
