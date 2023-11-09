@@ -74,7 +74,7 @@ export AI_COLLECTION_ID="embed-security"
 
 ### Ask an LLM a Question
 
-- [https://github.com/redten-ai/llama-client-aic/blob/main/examples/ask-llm.py](https://github.com/redten-ai/llama-client-aic/blob/main/examples/ask-llm.py)
+- [./examples/ask-llm.py](https://github.com/redten-ai/llama-client-aic/blob/main/examples/ask-llm.py)
 
 #### Ask a Question from the Command Line
 
@@ -104,7 +104,7 @@ job_id: 236
 
 #### Retry Getting the Results
 
-- [https://github.com/redten-ai/llama-client-aic/blob/main/examples/get-ai-result.py](https://github.com/redten-ai/llama-client-aic/blob/main/examples/get-ai-result.py)
+- [./examples/get-ai-result.py](https://github.com/redten-ai/llama-client-aic/blob/main/examples/get-ai-result.py)
 
 ```bash
 get-ai-result.py -i 236
@@ -125,7 +125,7 @@ get-ai-result.py -i 236
 
 #### Ask a Question using the Python REST Client
 
-- [examples/new-user-ask-a-question.py](https://github.com/redten-ai/llama-client-aic/blob/main/examples/new-user-ask-a-question.py#L17)
+- [./examples/new-user-ask-a-question.py](https://github.com/redten-ai/llama-client-aic/blob/main/examples/new-user-ask-a-question.py#L17)
 
 ```python
 import client_aic.ask as ask
@@ -192,7 +192,7 @@ Note: confidence score is a value between 0-100.0 that the reviewer uses to stat
 - **80-94** - the reviewer is confident in the answer
 - **95-100.0** - the reviewer considers this answer to be a common knowledge, a known truth or something that is almost considered as a fact
 
-- [https://github.com/redten-ai/llama-client-aic/blob/main/examples/review-answer.py](https://github.com/redten-ai/llama-client-aic/blob/main/examples/review-answer.py)
+- [./examples/review-answer.py](https://github.com/redten-ai/llama-client-aic/blob/main/examples/review-answer.py)
 
 ```bash
 review-answer.py -i 236 -a "additionally there are other issues with this code. it has an exploit and needs to address 1, 2, 3" -s 99.9
@@ -225,5 +225,3 @@ Here are two streamlit LLM examples showing how different web applications can l
 - [https://redten.io/a-2nd-graders-personalized-tutor-using-a-self-hosted-llm/](https://redten.io/a-2nd-graders-personalized-tutor-using-a-self-hosted-llm/)
 
 More streamlit and open source examples coming soon!
-
-
