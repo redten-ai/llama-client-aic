@@ -1,14 +1,16 @@
 # redten - A Platform for Distributed, Self-hosted LLM RAG and Reinforcement Learning with Human Feedback (RLHF)
 
+![a llama developer managing a cluster of remote llm agents with redten](https://raw.githubusercontent.com/redten-ai/llama-client-aic/main/docs/images/a-llama-developer-managing-a-cluster-of-remote-llm-agents-with-redten.png)
+
+## What is redten?
+
+A platform for building and testing large language models. Multi-tenant model testing results are stored in a database for experts to review later using the **review-answer.py** tool. Supports running gguf models using [llama-cpp-python](https://llama-cpp-python.readthedocs.io/en/latest/).
+
 ![redten - a distributed, self-hosted llm reinforcement learning with human feedback and rag architecture](https://raw.githubusercontent.com/redten-ai/llama-client-aic/main/docs/images/redten-a-distributed-self-hosted-llm-reinforcement-learning-with-rag-architecture.png)
 
 Python REST client for self-hosted llama building, testing and tuning platform at:
 
 [https://api.redten.io/v1/dev/](https://api.redten.io/v1/dev/)
-
-## What is redten?
-
-A platform for building and testing large language models. Multi-tenant model testing results are stored in a database for experts to review later using the **review-answer.py** tool. Supports running gguf models using [llama-cpp-python](https://llama-cpp-python.readthedocs.io/en/latest/).
 
 ## How does it work?
 
@@ -19,7 +21,7 @@ The redten RLHF REST api focuses on:
 decoupling LLM/gpu workloads from reinforcement learning with human feedback and RAG workloads
 - finding knowledge blindspots - search api for tracking LLM response quality across many dimensions: models, quantization, batches, context sizes, tokens, and embeddings (chunks, structured vs unstructured datasets and use cases)
 - Embedding as a Service (EaaS) with a multi-tenant job engine built on the v2 rust [restapi crate](https://docs.rs/restapi/latest/restapi/) that supports [s3 uploads](https://docs.rs/restapi/latest/restapi/is3/s3_upload_file/fn.s3_upload_file.html) and [s3 downloads](https://docs.rs/restapi/latest/restapi/is3/s3_download_to_file/fn.s3_download_to_file.html) and includes [kafka fire-and-forget publishing](https://docs.rs/restapi/latest/restapi/kafka/publish_msg/fn.publish_msg.html) using a persistent Postgres backend for tracking many ai workloads (e.g. question/answer, synthetic dataset generation) and results
-- evaluating any HuggingFace models with open question/answer datasets and custom RAG data sources (pdfs) in many [pgvector embedding databases](https://github.com/pgvector/pgvector)
+- evaluating any open source llm model with coming-soon open question/answer datasets with more RAG data sources (pdfs/csvs/txt/parquet) in many [pgvector embedding databases](https://github.com/pgvector/pgvector) using an emerging Retrieval as a Service (RaaS) architecture
 - building synthetic datasets from a RAG-customized LLM (lora/qlora coming soon!)
 
 ## Coming Soon
