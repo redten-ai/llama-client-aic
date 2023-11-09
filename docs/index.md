@@ -97,13 +97,26 @@ ask-llm.py -c embed-security -q "using std::namespace; int main() { std::cout <<
 Find the log line showing the job id:
 
 ```bash
-2023-11-08 18:05:59.149 INFO ask_a_question - info@redten.io.id=86 - job_id=212 result:
+job_id: 236
 ```
 
 #### Retry Getting the Results
 
 ```bash
-get-ai-result.py -i 212
+get-ai-result.py -i 236
+2023-11-09 03:47:26.881 INFO run_get_ai_result - search result -
+-- 1/1 job.id=236 ai_result.id=269 user_id=92
+ - question=using std::namespace; int main() { std::cout << hello << std::endl; return 256;}
+  - answer=There are a few things wrong with the code you've provided. First, you need to include <iostream> and <string> in your program, just like in the example you've provided.
+```causes the data to be lost
+- score=0.79
+- model=mistral-7b-instruct-v0.1.Q8_0.gguf
+- match_source=/d/embed/input/v1/security/cplusplus.pdf
+- match_page=5
+- collection=None
+- session_id=6c3b0905361f43d0971b9841fd689e3b
+- tags=None
+- reviewed_answer=None
 ```
 
 #### Ask a Question using the Python REST Client
@@ -176,11 +189,13 @@ Note: confidence score is a value between 0-100.0 that the reviewer uses to stat
 - **95-100.0** - the reviewer considers this answer to be a common knowledge, a known truth or something that is almost considered as a fact
 
 ```bash
-review-answer.py -i 221 -a "this code has an exploit and needs to address 1, 2, 3" -s 99.9
+review-answer.py -i 236 -a "additionally there are other issues with this code. it has an exploit and needs to address 1, 2, 3" -s 99.9
 ```
 
+#### Validate the reviewed answer shows up on the AI Result
+
 ```bash
-get-ai-result.py -i 221 | grep reviewed_
+get-ai-result.py -i 236 2>&1 | grep reviewed_
 ```
 
 ### Debugging
