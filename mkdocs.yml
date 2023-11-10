@@ -3,10 +3,10 @@
 # dev_addr: 0.0.0.0:8000
 site_name: llama-client-aic - distributed llms
 site_url: https://llama-client-aic.readthedocs.io/en/latest/
-repo_url: https://github.com/redten/llama-client-aic
-edit_uri: https://github.com/redten/llama-client-aic/blob/main/docs/
+repo_url: https://github.com/redten-ai/llama-client-aic
+edit_uri: https://github.com/redten-ai/llama-client-aic/blob/main/docs/
 site_description: A distributed LLM platform for building and training models on-premise or hybrid (where the expensive gpu clusters are on a cloud provider). Helps find knowledge gaps and blindspots while enabling structured and unstructured datasets to tune response quality over many LLM testing generations.
-site_author: redten
+site_author: redten-llamas
 
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
 theme:

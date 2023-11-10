@@ -1,6 +1,8 @@
-# Integation Guides
+# Integration Guides
 
 ## APIs For Integrating a cloud-hosted LLM agent into the REST API
+
+If you have a remote llm, you can POST your ai result(s) back using this api:
 
 ::: client_aic.req.ai.create_ai_result.create_ai_result
     handler: python

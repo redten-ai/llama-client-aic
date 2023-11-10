@@ -225,3 +225,11 @@ Here are two streamlit LLM examples showing how different web applications can l
 - [https://redten.io/a-2nd-graders-personalized-tutor-using-a-self-hosted-llm/](https://redten.io/a-2nd-graders-personalized-tutor-using-a-self-hosted-llm/)
 
 More streamlit and open source examples coming soon!
+
+### Python REST API Client
+
+- [https://github.com/redten-ai/llama-client-aic](https://llama-client-aic.readthedocs.io/en/latest)
+
+### Read the Docs
+
+- [redten - A Platform for Distributed, Self-hosted LLM RAG and Reinforcement Learning with Human Feedback (RLHF)](https://llama-client-aic.readthedocs.io/en/latest/)
